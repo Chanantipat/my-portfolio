@@ -6,7 +6,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #0F172A;
+    background:
+        radial-gradient(circle at top left,
+        rgba(59,130,246,0.2),
+        transparent 40%),
+        radial-gradient(circle at bottom right,
+        rgba(37,99,235,0.15),
+        transparent 35%),
+        #0F172A;
 }
 
 html {
@@ -240,6 +247,63 @@ body.light-mode .card {
   background: #d9dce0;
 }
 
+#welcome-screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0F172A;
+    color: white;
+    z-index: 9999;
+    cursor: pointer;
+    transition: opacity 0.8s ease;
+}
+
+#welcome-screen.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#welcome-screen h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+#welcome-screen p {
+    color: #94A3B8;
+}
+
+#particle {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: #3B82F6;
+    box-shadow:
+        0 0 10px #3B82F6,
+        0 0 20px #3B82F6;
+    animation: float linear infinite;
+}
+
+#typing-text {
+    color: #94A3B8;
+    margin-top: 10px;
+    min-height: 24px;
+}
+
+#typing-text::after {
+    content: "|";
+    animation: blink 0.8s infinite;
+}
+
 @keyframes heroFade {
     to {
         opacity: 1;
@@ -251,5 +315,32 @@ body.light-mode .card {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
     }
 }
