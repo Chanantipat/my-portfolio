@@ -23,7 +23,6 @@ body {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
-    z-index: 1000;
 }
 
 .nav-bar h1 {
@@ -49,6 +48,7 @@ body {
     transition: 0.3s;
 }
 
+/* underline animation */
 .menu li a::after {
     content: "";
     position: absolute;
@@ -60,14 +60,12 @@ body {
     transition: 0.3s;
 }
 
-.menu li a:hover {
-    color: #F1F5F9;
-}
-
 .menu li a:hover::after {
     width: 100%;
 }
 
-.menu li a.active {
-    color: #F1F5F9;
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
