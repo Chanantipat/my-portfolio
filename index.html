@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="noise"></div>
     <div id="particle"></div>
     <div id="welcome-screen">
         <h1>Click Anywhere To Enter</h1>
@@ -26,10 +27,11 @@
         <button class="theme-btn" id="theme-btn">☀️</button>
     </nav>
     <section id="home" class="hero">
+        <div class="hero-glow"></div>
         <div class="hero-text">
+            <p class="hero-tag">Welcome to my portfolio</p>
             <h1>Hi, I'm Chanantipat Janyou</h1>
             <p id="typing-text"></p>
-
             <div class="buttons">
                <a href="#project" class="btn">View project</a>
                <a href="#contact" class="btn-outline">Contact me</a>
@@ -38,9 +40,43 @@
     </section>
 
     <section id="about" class="section">
-        <h2>About Me</h2>
-        
-    </section>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+        <div class="about-image">
+            <img src="profile img/317849891_861536948380782_1501794171408942778_n.jpg" alt="Chanantipat">
+        </div>
+        <div class="about-content">
+            <span class="about-tag">Frontend Developer</span>
+            <h3>
+                Building modern websites
+                with clean and responsive design.
+            </h3>
+            <p>
+                Hello! I'm Chanantipat Janyou, a passionate Frontend Developer
+                who enjoys creating modern and user-friendly websites using
+                HTML, CSS, and JavaScript.
+            </p>
+            <p>
+                Currently, I am improving my web development skills and building
+                real-world projects to become a professional Full Stack Developer.
+            </p>
+            <div class="about-stats">
+                <div class="stat-card">
+                   <h3>10+</h3>
+                   <p>Projects Built</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1+</h3>
+                    <p>Years Learning</p>
+                </div>
+                <div class="stat-card">
+                    <h3>3</h3>
+                    <p>Main Technologies</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="project" class="section">
         <h2>project</h2>
@@ -52,15 +88,21 @@
     </section>
 
     <section id="skill" class="section">
-        <h2>Skills</h2>
-        <p>HTML, CSS, JavaScript</p>
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Git</div>
+            <div class="skill-card">Responsive</div>
+            <div class="skill-card">UX / UI Basics</div>
+        </div>
     </section>
 
     <section id="contact" class="section">
         <h2>Contact</h2>
         <p>Email: chanantipat08@gmail.com</p>
     </section>
-
     <script src="script.js"></script>
 </body>
 </html>
