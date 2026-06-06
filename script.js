@@ -1,6 +1,7 @@
+const nav = document.querySelector(".nav-bar");
+
 window.addEventListener("scroll", function () {
-    var nav = document.querySelector(".nav-bar");
-    if (window.scrolly > 50) {
+    if (window.scrollY > 50) {
         nav.classList.add("scrolled");
     } else {
         nav.classList.remove("scrolled");    
@@ -26,9 +27,9 @@ themeBtn.addEventListener("click", function () {
     document.body.classList.toggle("light-mode");
 
     if (document.body.classList.contains("light-mode")) {
-        themeBtn.innerHTML = "☀️";
-    } else {
         themeBtn.innerHTML = "🌙";
+    } else {
+        themeBtn.innerHTML = "☀️";
     }
 });
 
@@ -41,20 +42,7 @@ welcomeScreen.addEventListener("click", () => {
     }, 800);
 })
 
-const particleContainer = document.getElementById("particle");
-for (let i = 0; i < 50; i++) {
-    const particle = document.createElement("span");
-    const size = Math.random() * 5 + 2;
-    particle.classList.add("particle");
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-    particle.style.left = `${Math.random() * 100}%`;
-    particle.style.animationDuration =
-    `${Math.random() * 10 + 10}s`;
-    particle.style.animationDelay =
-    `${Math.random() * 5}s`;
-    particleContainer.appendChild(particle);
-}
+
 
 const texts = [
     "Frontend Developer",

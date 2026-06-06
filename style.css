@@ -99,16 +99,18 @@ body.light-mode .card {
     justify-content: space-between;
     align-items: center;
     padding: 18px 50px;
-    background: rgba(22, 31, 56, 0.6);
+    background: rgba(15, 23, 42, 0.2);
     backdrop-filter: blur(0px);
-    transition: 0.3s ease;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .nav-bar.scrolled {
-    background: rgba(22, 31, 56, 0.85);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 .nav-bar h1 {
@@ -130,6 +132,11 @@ body.light-mode .card {
     list-style: none;
     color: #F1F5F9;
     position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #3B82F6;
 }
 
 /* underline animation */
@@ -140,7 +147,7 @@ body.light-mode .card {
     bottom: -5px;
     width: 0%;
     height: 2px;
-    background: #2e6bce;
+    background: #3a63d3;
     transition: 0.3s;
 }
 
@@ -276,23 +283,6 @@ body.light-mode .card {
     color: #94A3B8;
 }
 
-#particle {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.particle {
-    position: absolute;
-    border-radius: 50%;
-    background: #3B82F6;
-    box-shadow:
-        0 0 10px #3B82F6,
-        0 0 20px #3B82F6;
-    animation: float linear infinite;
-}
-
 #typing-text {
     color: #94A3B8;
     margin-top: 10px;
@@ -327,15 +317,6 @@ body.light-mode .card {
     }
     100% {
         opacity: 0.5;
-    }
-}
-
-@keyframes float {
-    from {
-        transform: translateY(100vh);
-    }
-    to {
-        transform: translateY(-100px);
     }
 }
 
